@@ -340,10 +340,12 @@ nav {
   background-image: radial-gradient(ellipse at center, transparent, #ffffff4d);
   backdrop-filter: blur(4px);
 
-  /* Animation */
-  /* The odd opacity in your snippet was likely a snapshot of this animation running */
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
 }
+
+.pulse{  /* Animation */
+  /* The odd opacity in your snippet was likely a snapshot of this animation running */
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;}
 
 /* Required for the animation to work */
 @keyframes pulse {
@@ -370,7 +372,7 @@ h1 {
   /* Box Model */
   position: relative;
 
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  
 }
 h1 span{
   position: relative;
