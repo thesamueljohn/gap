@@ -1101,3 +1101,78 @@ display: none;
   background: #fdc11c;
 
 }
+
+
+/* ===========================
+   MOBILE NAVIGATION STYLES
+   Add this to your existing CSS
+   =========================== */
+
+.mobile-nav {
+  height: 100vh;
+  width: 60vw; 
+  max-width: 300px;
+  background-color: var(--light-bg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  position: fixed;
+  padding: 2.5rem 1rem;
+  top: 0;
+  left: -100%; /* Hidden by default */
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav.active {
+  left: 0; /* Slide in when active */
+}
+
+.mobile-nav .logo img {
+  width: 50px;
+  margin: 1.5rem 1rem;
+}
+
+.mobile-nav-items {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-nav-items li {
+  width: 100%;
+}
+
+.mobile-nav .nav-item {
+  font-size: 1.2rem;
+  display: block;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  color: var(--text-dark);
+  transition: 0.4s color, 0.4s background;
+}
+
+.mobile-nav .nav-item:hover {
+  background: #fdc11c;
+}
+
+/* Overlay when menu is open */
+/* .mobile-nav::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: -20;
+}
+
+.mobile-nav.active::before {
+  opacity: 1;
+  visibility: visible;
+} */
