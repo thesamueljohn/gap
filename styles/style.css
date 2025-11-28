@@ -32,7 +32,7 @@ html {
   scroll-behavior: auto;
   font-size: 16px;
 }
-.mobile{
+.mobile {
   display: none !important;
 }
 body {
@@ -111,6 +111,9 @@ h4 {
   overflow: hidden;
 }
 
+.about-section {
+  overflow: auto;
+}
 .grid {
   display: grid;
   gap: 2rem;
@@ -167,7 +170,7 @@ h4 {
 }
 
 .btn-outline:hover {
-  transform: scale(1.03 ) !important;
+  transform: scale(1.03) !important;
 }
 .btn-outline:hover span:last-child {
   transform: translateX(5px);
@@ -339,13 +342,13 @@ nav {
   border: 1px solid #ffffff;
   background-image: radial-gradient(ellipse at center, transparent, #ffffff4d);
   backdrop-filter: blur(4px);
-
-
 }
 
-.pulse{  /* Animation */
+.pulse {
+  /* Animation */
   /* The odd opacity in your snippet was likely a snapshot of this animation running */
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;}
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
 
 /* Required for the animation to work */
 @keyframes pulse {
@@ -371,10 +374,8 @@ h1 {
 
   /* Box Model */
   position: relative;
-
-  
 }
-h1 span{
+h1 span {
   position: relative;
   /* display: inline-block; */
 }
@@ -386,7 +387,7 @@ h1 span{
   bottom: 5px;
   left: -10%;
   right: 0;
-  align-self:center;
+  align-self: center;
   justify-self: center;
 
   /* Layout & Sizing */
@@ -541,7 +542,7 @@ h1 span{
   /* padding: 2.5rem; */
   display: flex;
   flex-direction: column;
-  gap: .2rem;
+  gap: 0.2rem;
   /* border-radius: 20rem; */
   text-align: center;
   /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15);; */
@@ -579,7 +580,8 @@ h1 span{
   align-items: start;
 }
 
-.about-image ,.testimonials-image{
+.about-image,
+.testimonials-image {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -602,6 +604,39 @@ h1 span{
   margin-bottom: 1.5rem;
   color: var(--text-body);
   font-size: 1.1rem;
+}
+
+.about-content p .link {
+  position: relative;
+}
+.about-content p .link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 00px;
+  border: 3px solid #fdc11c;
+  border-radius: 0.5rem;
+  inset: 0;
+  background: url(../assets/cac-reg.jpg) no-repeat;
+  background-size: cover;
+  aspect-ratio: 4/5;
+  /* display: none; */
+  transition: 0.4s;
+  transition-delay: .6s;
+  border-color: transparent;
+  transform: rotate(-20deg);
+  box-shadow: -5px 5px 5px 3px transparent;
+}
+
+.about-content p .link:hover::after {
+  /* display: block; */
+  border-color: #fdc11c;
+  transform: rotate(-2deg);
+
+  top: -10px;
+  left: 100px;
+  width: 250px;
+  box-shadow: -5px 5px 5px 3px #0000002f;
 }
 
 /* --- SERVICES SECTION --- */
@@ -631,7 +666,8 @@ h1 span{
   transform: scale(1.1);
 }
 
-.service-overlay,.person-overlay {
+.service-overlay,
+.person-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -640,9 +676,8 @@ h1 span{
   background: linear-gradient(to top, #c3a3ff, transparent);
   z-index: 2;
 }
-.person-info{
+.person-info {
   z-index: 3;
-
 }
 .service-content {
   position: absolute;
@@ -651,20 +686,20 @@ h1 span{
   background: white;
   padding: 1.25rem;
   margin: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   /* margin-top: -60px; */
   bottom: 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
   transition: var(--transition);
 }
 
-.service-content-top{
+.service-content-top {
   width: 100%;
-   display: flex;
+  display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
@@ -693,16 +728,17 @@ h1 span{
   padding: 0rem 0;
 }
 
-.ceo-section .grid-floor{
-  background-image: linear-gradient(rgb(67 67 67 / 7%) 1px, transparent 1px), linear-gradient(90deg, rgb(30 30 30 / 7%) 1px, transparent 1px);
+.ceo-section .grid-floor {
+  background-image: linear-gradient(rgb(67 67 67 / 7%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(30 30 30 / 7%) 1px, transparent 1px);
 }
-.ceo-content{
+.ceo-content {
   padding-block: 5rem;
 }
 
 .ceo-section p {
   color: #000;
-padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .person-card {
@@ -734,11 +770,10 @@ padding-bottom: 1rem;
   padding: 1rem;
   border-radius: 12px;
   backdrop-filter: blur(5px);
-  width:max-content;
+  width: max-content;
   box-shadow: -5px 5px 5px 3px #0000002f;
   right: 2rem;
-  top:45%;
-
+  top: 45%;
 }
 
 .person-name {
@@ -760,7 +795,7 @@ padding-bottom: 1rem;
   gap: 3rem;
   align-items: center;
 }
-.testimonials-image{
+.testimonials-image {
   aspect-ratio: 1/1;
 }
 .testimonial-content {
@@ -896,17 +931,16 @@ footer {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 992px) {
-  .logo img{
+  .logo img {
     width: 150px;
-
   }
-  .nav-items{
+  .nav-items {
     display: none;
   }
-  .menu-btn{
+  .menu-btn {
     display: flex !important;
   }
-  .nav-btn{
+  .nav-btn {
     display: none;
   }
   .hero-title,
@@ -914,10 +948,10 @@ footer {
     font-size: 4.5rem;
   }
 
-  .hero-content{
-    padding:  45px 20px 30px;
+  .hero-content {
+    padding: 45px 20px 30px;
   }
-  .container{
+  .container {
     width: 95%;
   }
 }
@@ -932,7 +966,7 @@ footer {
 }
 
 @media (max-width: 890px) {
-  .stats-grid::after{
+  .stats-grid::after {
     content: "";
     display: block;
     width: 2px;
@@ -944,10 +978,9 @@ footer {
     right: 50%;
     background-color: white;
   }
- .stat-card {
-  border-right: none !important;
-}
-
+  .stat-card {
+    border-right: none !important;
+  }
 }
 @media (max-width: 768px) {
   .nav-menu {
@@ -971,7 +1004,6 @@ footer {
     z-index: 101;
   }
 
-
   .hero-title {
     font-size: 2.75rem;
   }
@@ -981,11 +1013,14 @@ footer {
   }
 
   .person-card {
-   overflow: hidden; }
-  .ceo-grid {
-gap: 2.5rem !important;
+    overflow: hidden;
   }
-  .ceo-content {padding-block: 0 2rem;}
+  .ceo-grid {
+    gap: 2.5rem !important;
+  }
+  .ceo-content {
+    padding-block: 0 2rem;
+  }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -996,32 +1031,33 @@ gap: 2.5rem !important;
 }
 
 @media (max-width: 594px) {
-/* .stat-card{
+  /* .stat-card{
     border-right:none !important;
   } */
- .stats-grid::after{
+  .stats-grid::after {
     /* content: ""; */
     display: none;
   }
 }
 @media (max-width: 480px) {
-  .mobile{
-  display: flex;
-}
-.menu-btn span{
-display: none;
-}
-.menu-btn{
-  width: 40px;
-  height: 40px;
-  border-radius: 1rem;
-  padding: 0;
-}
-.hero-tag{
-  font-size: 0.7rem;
-}
-.container {
-     width: 100%;}
+  .mobile {
+    display: flex;
+  }
+  .menu-btn span {
+    display: none;
+  }
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 1rem;
+    padding: 0;
+  }
+  .hero-tag {
+    font-size: 0.7rem;
+  }
+  .container {
+    width: 100%;
+  }
   .footer-grid {
     grid-template-columns: 1fr;
   }
@@ -1032,7 +1068,6 @@ display: none;
   .hero-content {
     padding: 45px 20px 30px;
   }
-  
 
   nav {
     padding: 1.5rem 2rem;
@@ -1048,8 +1083,8 @@ display: none;
 
   .hero-tagline {
     padding: 0rem 0;
-     font-size: 1rem; /* 16px */
-  line-height: 1.5rem; /* 20px */
+    font-size: 1rem; /* 16px */
+    line-height: 1.5rem; /* 20px */
   }
 
   .nav .nav-btn {
@@ -1057,53 +1092,48 @@ display: none;
   }
 }
 
-
-
-
-.mobile-nav{
+.mobile-nav {
   height: 100vh;
-  width: 60vw; 
+  width: 60vw;
   max-width: 300px;
   background-color: var(--light-bg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   position: fixed;
   padding: 2.5rem 1rem;
-  
+
   /* position: absolute; */
   inset: 0;
 }
-.mobile-nav .logo img{
+.mobile-nav .logo img {
   width: 50px;
   margin: 1.5rem 1rem;
 }
-.mobile-nav-items{
+.mobile-nav-items {
   margin-top: 3rem;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
 }
-.mobile-nav-items li{
+.mobile-nav-items li {
   width: 100%;
 }
 
-.mobile-nav .nav-item{
+.mobile-nav .nav-item {
   font-size: 1.2rem;
   display: block;
   padding: 1rem 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   width: 100%;
   color: var(--text-dark);
-  transition: .4s color, .4s background;
+  transition: 0.4s color, 0.4s background;
 }
 
-.mobile-nav .nav-item:hover{
+.mobile-nav .nav-item:hover {
   /* color: var(--primary); */
   background: #fdc11c;
-
 }
-
 
 /* ===========================
    MOBILE NAVIGATION STYLES
@@ -1112,7 +1142,7 @@ display: none;
 
 .mobile-nav {
   height: 100vh;
-  width: 60vw; 
+  width: 60vw;
   max-width: 300px;
   background-color: var(--light-bg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -1178,3 +1208,12 @@ display: none;
   opacity: 1;
   visibility: visible;
 } */
+
+.link {
+  transition: color 0.3s;
+  text-decoration: underline;
+  /* font-size: 0.95rem; */
+}
+.link:hover {
+  color: var(--primary);
+}
