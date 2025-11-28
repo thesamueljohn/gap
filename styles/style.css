@@ -1058,6 +1058,17 @@ footer {
   .container {
     width: 100%;
   }
+  .about-content p .link:hover::after {
+  /* display: block; */
+  border-color: #fdc11c;
+  transform: rotate(-2deg);
+
+  top: 10px;
+  left: -10px;
+  width: 250px;
+  box-shadow: -5px 5px 5px 3px #0000002f;
+}
+
   .footer-grid {
     grid-template-columns: 1fr;
   }
