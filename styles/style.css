@@ -245,7 +245,7 @@ header {
 }
 
 nav {
-  padding: 2rem 4rem;
+  padding: 2rem 2.5rem !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -622,7 +622,7 @@ h1 span {
   aspect-ratio: 4/5;
   /* display: none; */
   transition: 0.4s;
-  transition-delay: .6s;
+  transition-delay: 0.6s;
   border-color: transparent;
   transform: rotate(-20deg);
   box-shadow: -5px 5px 5px 3px transparent;
@@ -1059,15 +1059,15 @@ footer {
     width: 100%;
   }
   .about-content p .link:hover::after {
-  /* display: block; */
-  border-color: #fdc11c;
-  transform: rotate(-2deg);
+    /* display: block; */
+    border-color: #fdc11c;
+    transform: rotate(-2deg);
 
-  top: 10px;
-  left: -10px;
-  width: 250px;
-  box-shadow: -5px 5px 5px 3px #0000002f;
-}
+    top: 10px;
+    left: -10px;
+    width: 250px;
+    box-shadow: -5px 5px 5px 3px #0000002f;
+  }
 
   .footer-grid {
     grid-template-columns: 1fr;
@@ -1081,7 +1081,7 @@ footer {
   }
 
   nav {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 2rem !important;
   }
   .hero-title,
   h1 {
